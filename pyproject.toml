@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dscim-dev"
+version = "0.2.0"
+description = "Modular DSCIM library"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "DSCIM Development Team"}
+]
+keywords = ["climate", "economics", "damage", "modeling", "DSCIM"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"]
+
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "xarray>=0.19.0",
+    "scipy>=1.7.0",
+    "statsmodels>=0.12.0",
+    "zarr>=2.8.0",
+    "netcdf4>=1.5.0",
+    "h5py>=3.0.0",
+    "pyyaml>=5.4.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-cov>=2.10",
+    "pytest-xdist>=2.0",
+]
+dev = [
+    "black>=21.0",
+    "isort>=5.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+]
+
+[project.urls]
+Homepage = "https://github.com/ClimateImpactLab/dscim"
+Repository = "https://github.com/ClimateImpactLab/dscim"
+Documentation = "https://github.com/ClimateImpactLab/dscim/blob/main/README.md"
+"Bug Tracker" = "https://github.com/ClimateImpactLab/dscim/issues"
+
+[tool.setuptools.packages.find]
+include = ["dscim_dev*"]
+
+[tool.pytest.ini_options]
+testpaths = ["dscim_dev/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+markers = [
+    "integration: marks tests as integration tests",
+    "slow: marks tests as slow",
+]
+
+[tool.coverage.run]
+source = ["dscim_dev"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+] 
