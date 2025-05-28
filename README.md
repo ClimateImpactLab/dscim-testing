@@ -1,5 +1,11 @@
 # DSCIM Development Library
 
+[![CI](https://github.com/ClimateImpactLab/dscim/actions/workflows/ci.yml/badge.svg?branch=dscim-modular)](https://github.com/ClimateImpactLab/dscim/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
+[![Coverage](https://codecov.io/gh/ClimateImpactLab/dscim/branch/dscim-modular/graph/badge.svg)](https://codecov.io/gh/ClimateImpactLab/dscim)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/ClimateImpactLab/dscim/actions/workflows/ci.yml)
+
 A modular refactor of the DSCIM (Data-driven Spatial Climate Impact Model) library for economic damage calculations from climate change.
 
 ## Purpose
@@ -31,7 +37,6 @@ This project provides a clean, modular architecture for climate damage modeling 
 
 ### Prerequisites
 - Python 3.8+
-- conda or mamba package manager
 
 ### Setup
 ```bash
@@ -115,10 +120,3 @@ The library includes comprehensive consistency tests that validate numerical equ
 - Memory optimization for high-resolution climate data
 - Distributed computing support for uncertainty quantification
 
-## Contributing
-
-This project maintains strict numerical consistency with the original DSCIM implementation. All changes should include appropriate tests validating consistency where applicable.
-
-## License
-
-See LICENSE file for details.
