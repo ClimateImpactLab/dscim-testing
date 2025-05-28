@@ -35,7 +35,8 @@ This project provides a clean, modular architecture for climate damage modeling 
 ## Installation
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.9+
+- conda (recommended for managing dependencies)
 
 ### Setup
 ```bash
@@ -43,12 +44,15 @@ This project provides a clean, modular architecture for climate damage modeling 
 git clone <repository-url>
 cd dev-DSCIM
 
-# Create conda environment
-conda env create -f environment.yaml
+# Create and activate conda environment
+conda create -n dscim-testing python=3.11
 conda activate dscim-testing
 
-# Install in development mode
+# Install dependencies
 pip install -e .
+
+# For running consistency tests (optional)
+pip install dscim
 ```
 
 ## Testing
