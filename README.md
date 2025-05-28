@@ -1,6 +1,5 @@
 # DSCIM Development Library
 
-[![CI](https://github.com/ClimateImpactLab/dscim/actions/workflows/ci.yml/badge.svg?branch=dscim-modular)](https://github.com/ClimateImpactLab/dscim/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 [![Coverage](https://codecov.io/gh/ClimateImpactLab/dscim/branch/dscim-modular/graph/badge.svg)](https://codecov.io/gh/ClimateImpactLab/dscim)
